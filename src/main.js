@@ -102,6 +102,9 @@ function update() {
     sk.skeweredFruits?.forEach((fruit, index) => {
       fruit.x = sk.x + 40 - index * 25; // more offset the later it's hit
       fruit.y = sk.y;
+      fruit.y = sk.y + Math.sin(index) * 5;
+      fruit.setAngle(-10 + index * 5);
+
     });
   });
 }
